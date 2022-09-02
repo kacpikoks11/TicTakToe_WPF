@@ -1,0 +1,52 @@
+﻿<Window x:Class="TicTakToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTakToe"
+        mc:Ignorable="d"
+        Title="TikTakToe" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundColor}"
+        Foreground="{StaticResource FontColor}"
+        Loaded="On_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Height="67" Margin="0,0,0,0"
+                   TextWrapping="Wrap" Text="TicTacToe" 
+                   VerticalAlignment="Top" Width="160" FontSize="36"/>
+
+        <Border x:Name="GridBorder"
+                BorderBrush="{StaticResource LinesColor}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0,50,0,0"
+                BorderThickness="2"
+                SnapsToDevicePixels="True"
+                RenderOptions.EdgeMode="Aliased"
+                MouseLeftButtonUp="Button_Click">
+            <UniformGrid x:Name="GameGrid"
+                         Width="450"
+                         Height="450"
+                         Background="{StaticResource BoardColor}"
+                         SnapsToDevicePixels="True"
+                         RenderOptions.BitmapScalingMode="HighQuality"
+                         >
+            </UniformGrid>
+
+        </Border>
+        <Button Content="Reset" HorizontalAlignment="Left" Height="23" Margin="56,244,0,0" VerticalAlignment="Top" Width="56"
+                Click="Reset" Background="#FF754242"/>
+
+
+
+
+    </Grid>
+</Window>
